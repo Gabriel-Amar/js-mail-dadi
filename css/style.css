@@ -1,3 +1,9 @@
-.mail, .calcola, .risultato{
+.mail, .calcola, .risultato, .genera, .col-4{
+    margin: auto;
+}
+body > div.container.mt-5 > h1{
+    margin-top: 125px;
+}
+#numero1, #numero2, #risultato2, #giocatore1, #giocatore2{
     margin: auto;
 }

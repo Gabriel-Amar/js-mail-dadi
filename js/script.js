@@ -23,16 +23,43 @@ bottone.addEventListener("click", function(){
 
 
 
-let numeroUno = Math.floor(Math.random() * 6);
-let numeroDue = Math.floor(Math.random() * 6);
+let bottone2 = document.getElementById("genera")
+let generato1 = document.getElementById("numero1")
+let generato2 = document.getElementById("numero2")
+let risultato2 = document.getElementById("risultato2")
+let giocatore1 = document.getElementById("giocatore1")
+let giocatore2 = document.getElementById("giocatore2")
 
-console.log(numeroUno)
-console.log(numeroDue)
 
-if(numeroUno > numeroDue){
-    console.log("Ha vinto l'essere umano")
-} else if (numeroUno < numeroDue){
-    console.log("Ha vinto il computer")
-} else{
-    console.log("Pareggio")
-}
+bottone2.addEventListener("click", function(){
+    generato1.classList.remove("d-none");
+
+    generato2.classList.remove("d-none");
+
+    risultato2.classList.remove("d-none");
+
+    giocatore1.classList.remove("d-none");
+
+    giocatore2.classList.remove("d-none");
+
+    let numero1 = Math.floor(Math.random() * 6);
+    
+    let numero2 = Math.floor(Math.random() * 6);
+    
+    if(numero1 > numero2){
+        risultato2.innerHTML = ("Ha vinto l'essere umano")
+        generato1.innerHTML = numero1
+        generato2.innerHTML = numero2
+
+    } 
+    else if (numero1 < numero2){
+        risultato2.innerHTML = ("Ha vinto il computer")
+        generato1.innerHTML = numero1
+        generato2.innerHTML = numero2
+    } 
+    else{
+        ("Pareggio")
+    }
+
+
+})
