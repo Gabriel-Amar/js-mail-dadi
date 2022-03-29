@@ -1,20 +1,25 @@
-let email = prompt ("inserisci la tua email");
+let bottone = document.getElementById("calcola")
+let mail = document.getElementById("mail")
+let risultato = document.getElementById("risultato")
 
-let validEmail = ["prova0@gmail.com", "prova1@gmail.com", "prova2@gmail.com"];
+bottone.addEventListener("click", function(){
+    risultato.classList.remove("d-none")
+    let validEmail = ["prova0@gmail.com", "prova1@gmail.com", "prova2@gmail.com"];
+    let emailValida = false;
 
-
-let emailValida = false;
-
-for(let i = 0; i < validEmail.length; i++){
-    if(validEmail[i] === email){
-        emailValida = true;
+    for(let i = 0; i < validEmail.length; i++){
+        if(validEmail[i] === mail.value){
+            emailValida = true;
+        }
     }
-}
-if(emailValida){
-    console.log("Accesso eseguito")
-} else {
-    console.log("Accesso negato")
-}
+    if(emailValida){
+        risultato.innerHTML = "Accesso eseguito";
+        
+    } else {
+        risultato.innerHTML = "Accesso negato. Usa e-mail valida";
+    }
+})
+
 
 
 
