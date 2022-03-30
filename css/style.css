@@ -7,3 +7,6 @@ body > div.container.mt-5 > h1{
 #numero1, #numero2, #risultato2, #giocatore1, #giocatore2{
     margin: auto;
 }
+body{
+    background-color: #afd9d5;
+}
